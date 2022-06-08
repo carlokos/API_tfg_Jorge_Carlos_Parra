@@ -34,7 +34,6 @@ class UserServiceImpl implements UserServiceInterface{
     /**
      * Crea un nuevo usuario en el sistema, necesitamos descomentar la linea
      * $app->withEloquent() en el archivo app
-     * QUEDA POR HACER EL ENCRYPTED DE LA PASSWORD POR TEMAS DE SEGURIDAD
      */
     function postUser(array $user){
         $this->model->create($user);
