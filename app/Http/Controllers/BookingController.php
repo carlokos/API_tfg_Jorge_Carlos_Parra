@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 use App\Services\Implemetations\BookingServiceImpl;
 use App\Models\Booking;
 
+/**
+ * Creamos el controlador con:
+ * -Nuestro implementación del servicio
+ * -Un request el cual tiene el resultado de la consulta
+ * -iniciamos ambos y nos ahorramos el buscar el modelo
+ */
 class BookingController extends Controller
 {
     /**
@@ -46,7 +52,7 @@ class BookingController extends Controller
         return response($this->BookingService->getBooking());
     }
 
-    function deleteUser(int $id){
+    function deleteBooking(int $id){
         $this->BookingService->delBooking($id);
         return response("", 204);
     }

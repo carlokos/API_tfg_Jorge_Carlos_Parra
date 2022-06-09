@@ -53,6 +53,6 @@ $router->group(["prefix" => "/v1"], function () use ($router) {
     $router->group(["prefix" => "/booking"], function () use ($router) {
         $router->post('/register', 'BookingController@createBooking');
         $router->get('/list', 'BookingController@getListBooking');
-        $router->delete("/{id}", 'BookingController@deleteUser');
+        $router->delete("/{id}", 'BookingController@deleteBooking');
     });
  });
